@@ -1,4 +1,5 @@
-// Assignment code here
+// Updated assignment code here
+
 var specialChar = ["!","@","#","$","%","&"]
 var lowerCase = ["a","b"]
 var upperCase = ["A"]
