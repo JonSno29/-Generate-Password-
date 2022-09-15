@@ -24,7 +24,8 @@ WHEN prompted for password criteria
 
 THEN I select which criteria to include in the password
 
-WHEN prompted for the length of the password
+WHEN prompted for the length
+ of the password
 
 THEN I choose a length of at least 8 characters and no more than 128 characters
 
@@ -70,7 +71,7 @@ THEN the password is either displayed in an alert or written to the page
 
 🎗 Screencastify for mock-up GIF
  
-/Users/jonsnover/Desktop/-Generate-Password-/PassMU.gif
+![PassMU](https://user-images.githubusercontent.com/109987633/190507490-ef57856b-5638-41a3-83f2-e0e5a8058bc6.gif)
 
 ## CREDITS:
 
