@@ -79,6 +79,8 @@ My fellow bootcamp study group at the U Of M, it's always fun collaborating with
 
 MDN DOCUMENTS: https://developer.mozilla.org/en-US/docs/Web/JavaScript
 
+Thank You for the Starter Code: (https://github.com/Xandromus)
+
 # LICENSE:
 
 MIT LICENSE
