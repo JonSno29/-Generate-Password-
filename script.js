@@ -30,11 +30,11 @@ function writePassword() {
   var correctPrompts = getPrompts(); 
   var passwordText = document.querySelector("#password");
 
-if (correctPrompts) { 
+  if (correctPrompts) { 
   var newPassword = generatePassword();
   passwordText.value = newPassword;
   } else {
-    passwordText.value = "";
+  passwordText.value = "newPassword";
   }
 
 }
@@ -43,10 +43,10 @@ if (correctPrompts) {
 
 //generatePassword bases on prompt
 function generatePassword() {
-  console.log("clicked button")
   var password = "" ;
-  for(var i = 0; i < lengthOfPass; i++){
+  for(var i = 0; i < lengthOfPass; i++) {
       var randomIndex = Math.floor(Math.random() * choiceArr.length);
+      password = password + choiceArr[randomIndex];
   }
   return password;
 
