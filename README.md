@@ -46,8 +46,13 @@ THEN the password is either displayed in an alert or written to the page
 
 ## LIVE LINK:
 
+Repository:
+
 https://github.com/JonSno29/-Generate-Password-.git
 
+WebPage:
+
+https://jonsno29.github.io/-Generate-Password-/
 
 ## INSTALLATION, USAGE & MOCK-UP:
 
