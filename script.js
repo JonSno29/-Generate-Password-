@@ -1,31 +1,28 @@
-// Assignment code here
-var generateBtn = document.querySelector("#generate");
+// Start working code here
+// User input variables
+// Start password variable values
+// Special characters arrays
+var lengthOfPass = 8-128;
+var choiceArr =[];
+
+// Special characters
+var SpecialCharArr = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", "\:", "\;", " < ", "=", " > ", " ? ", "@", "[", "\\", "]", " ^ ", "_", "`", "{", "|", "}", "~"];
+
+// lowerCase alphabet characters
+var LowerCaseArr = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+
+// upperCase alphabet characters
+var UpperCaseArr = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+
+// Numeric characters
+var NumbersArr = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 
 
-var specialChar = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", "\:", "\;", " < ", "=", " > ", " ? ", "@", "[", "\\", "]", " ^ ", "_", "`", "{", "|", "}", "~"];
-var lowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-var upperCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
-var numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+// Get references to generate element
+generateBtn = document.querySelector("#generate");
 
-function generatePassword() {
- var lengthofpass = prompt ("Password must be 8-128 characters")
- console.log (lengthofpass)
- if (lengthofpass <=128 && lengthofpass >=8){
-  console.log ("passwordcheck")
-  var confirmNumber = confirm("Do you want numbers?")
-  console.log (confirmNumber)
-  var confirmLower = confirm("Do you want lower case letters?")
-  if (confirmNumber){ 
-    
-  }
- } else {
- generatePassword()
- }
-  return "Generated password will go here!";
-  
-}
-
-// Get references to the #generate element
+// Add event listener to generate button
+generateBtn.addEventListener("click", writePassword);
 
 // Write password to the #password input
 function writePassword() {
@@ -36,24 +33,38 @@ function writePassword() {
 
 }
 
-function UserInput(ps) {
-    document.getElementById("password").textContent = ps;
+// Create a function to generate a password closing
+// Using "window.prompt" instead of only "prompt",  "window" represents the whole list, or the global script.
+//generatePassword bases on prompt
+function generatePassword() {
+  console.log("clicked button")
+  
 }
+  
+function getPrompts(){
+  lengthOfPass = parseInt(window.prompt("Password must be between 8-128 characters \n Use UPPERCASE and lowercase LeTtErS \n Use a Numer1c va1ue \n Use $pec|al Ch@racter$"));
 
-var copy = document.querySelector("#copy");
-copy.addEventListener("click", function () {
-    copyPassword();
-});
+  // Used "if" statements to check progress
+  if(isNaN(lengthOfPass) || lengthOfPass < 8 || lengthOfPass > 128) {
+    alert("The length of Password must be between 8-128 characters, Take another stab at it.");
+    return false;
+  }
 
-function copyPassword() {
-    document.getElementById("password").select();
-    document.execCommand("Copy");
-    alert("Password copied to clipboard!");
+  if (confirm("Do you want to use Numbers?")) {
+    choiceArr = choiceArr.concat(NumbersArr);
+  }
+  if (confirm("Do you want to use lowercase letters?")) {
+    choiceArr = choiceArr.concat (LowerCaseArr);
+  }
+  
+  if  (confirm("Do you want to use UPPERCASE letters?")) {
+    choiceArr = choiceArr.concat (UpperCaseArr);
+  }
+  
+  if (confirm("Do you want to use SpecialCharacters?!@#$*")) {
+    choiceArr = choiceArr.concat (SpecialCharArr);
 }
-
-
-
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
-
-
+  
+  return true;
+  
+}
