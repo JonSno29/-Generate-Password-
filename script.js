@@ -1,7 +1,12 @@
 // Start working code here
-// User input variables
-// Start password variable values
-// Special characters arrays
+// Step 1: Prompt the user.
+  //Password length between 8-128.
+  //Lowercase, Uppercase, Numerical and Special Characters.
+// Step 2: Input Validation
+// Step 3: Generate password based on criteria.
+// Step 4: Display the password where the "your secure password is."
+
+//Start Coding
 var lengthOfPass = 8-128;
 var choiceArr =[];
 
@@ -17,7 +22,6 @@ var UpperCaseArr = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", 
 // Numeric characters
 var NumbersArr = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 
-
 // Get references to generate element
 var generateBtn = document.querySelector("#generate");
 
@@ -29,7 +33,10 @@ generateBtn.addEventListener("click", writePassword);
 function writePassword() {
   var correctPrompts = getPrompts(); 
   var passwordText = document.querySelector("#password");
+  console.log("newPassword")
 
+// Create a function to generate a password closing
+// generatePassword bases on prompt
   if (correctPrompts) { 
   var newPassword = generatePassword();
   passwordText.value = newPassword;
@@ -39,9 +46,7 @@ function writePassword() {
 
 }
 
-// Create a function to generate a password closing
 
-//generatePassword bases on prompt
 function generatePassword() {
   var password = "" ;
   for(var i = 0; i < lengthOfPass; i++) {
@@ -56,7 +61,7 @@ function generatePassword() {
 function getPrompts(){
   choiceArr =[];
   
-  
+  // Prompt the User
   lengthOfPass = parseInt(window.prompt("Password must be between 8-128 characters \n Use UPPERCASE and lowercase LeTtErS \n Use a Numer1c va1ue \n Use $pec|al Ch@racter$"));
 
   
