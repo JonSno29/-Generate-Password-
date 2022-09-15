@@ -1,94 +1,113 @@
-# Password Generator Starter Code
+# PASSWORD GENERATOR
 
+## OVERVIEW:
 
-## MOCK UP:
+To, modify a Starter Code which will generate random passwords based pn the code used. This web application will run on HTML, CSS and will be powered by JavaScript. The web application will also be adaptable to multiple screen sizes.
 
-/Users/jonsnover/Desktop/UofM-VIRT-FSF-PT-08-2022-U-LOLC-ENTG/03-JavaScript/02-Challenge/Assets/03-javascript-homework-demo.png
-function UserInput(ps) {
-    document.getElementById("password").textContent = ps;
-}
+## User Story
 
-var copy = document.querySelector("#copy");
-copy.addEventListener("click", function () {
-    copyPassword();
-});
+AS AN employee with access to sensitive data
 
-function copyPassword() {
-    document.getElementById("password").select();
-    document.execCommand("Copy");
-    alert("Password copied to clipboard!");
-}
+I WANT to randomly generate a password that meets certain criteria
 
-var selectedOptions = [];
-  var finalPass = "";
+SO THAT I can create a strong password that provides greater security
 
+## Acceptance Criteria
 
+GIVEN I need a new, secure password
 
-}
+WHEN I click the button to generate a password
 
+THEN I am presented with a series of prompts for password criteria
 
+WHEN prompted for password criteria
 
-var lengthOfPass = window.prompt ()
-  lengthOfPass = parseInt(lengthOfPass);
-  console.log(lengthOfPass);
+THEN I select which criteria to include in the password
 
-// prompt user to choose password length
-if (!lengthOfPass) {
-  alert("Enter a valid number.");
-  return "Password length has not been set."
-} else if (lengthOfPass < 8) {
-  alert("That is not within the password limit. Please try again.");
-  return "Invalid password length. Please try again.";
-} else if (lengthOfPass> 128) {
-  alert("That is not within the password limit. Please try again.");
-  return "Invalid password length. Please try again.";
-}
+WHEN prompted for the length of the password
 
-// Prompt user to ask if they want lowercase, uppercase, numerical, special charaters.
-  if {
+THEN I choose a length of at least 8 characters and no more than 128 characters
 
-  
+WHEN asked for character types to include in the password
 
- // Use "if" statement to make sure the user chooses at least one of four character choices.
- if (confirmLower === false && confirmUpper === false && confirmSpecial === false) { 
-  window.alert("Please select at least ONE ch@r@ct3r! type. \n Please click Generate Password button & try again!") 
-  return "No password generated";
-}
+THEN I confirm whether or not to include lowercase, uppercase, numeric, and/or special characters
 
- // validate user input 
- if (hasLower) {
-   selectedOptions.push(...LowerCase);
-}
- if (hasUpper) {
-   selectedOptions.push(...UpperCase);
-}
- if (hasNumber) {
-   selectedOptions.push(... Number);
-}
- if (hasCharacter) {
-   selectedOptions.push(...SpecialChar);
-}
+WHEN I answer each prompt
 
- // Returns the randomly generated user password
- for (let i = 0; i < lengthOfPass; i++) {
-  var randomIndex = Math.floor(Math.random() * userChar.length);
-  var randomCharacter = userChar [randomIndex]
-  finalPass = finalPass + randomCharacter;
-}
+THEN my input should be validated and at least one character type should be selected
 
-}
+WHEN all prompts are answered
 
-return finalPass;
+THEN a password is generated that matches the selected criteria
+
+WHEN the password is generated
+
+THEN the password is either displayed in an alert or written to the page
+
+## LIVE LINK:
 
 
 
+## INSTALLATION, USAGE & MOCK-UP:
 
+🎗 JavaScript
 
-// Get references to the #generate element
+🎗 Media Queries
 
-// Write password to the #password input
+🎗 Terminal
 
+🎗 Git
 
-  
-};
+🎗 GitHub
 
+🎗 GitHub Pages
+
+🎗 Visual Studio (VS) Code 
+
+🎗 HTML 
+
+🎗 CSS 
+
+🎗 Screencastify for mock-up GIF
+ 
+/Users/jonsnover/Desktop/-Generate-Password-/PassMU.gif
+
+## CREDITS:
+
+My fellow bootcamp study group at the U Of M, it's always fun collaborating with eachother.
+
+MDN DOCUMENTS: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+
+# LICENSE:
+
+MIT LICENSE
+
+## FEATURES:
+
+🎗 Uses a GIF to show features.
+
+🎗 Automatically Generates Passwords.
+
+🎗 Visually appealing.
+
+🎗 Customizable per user.
+
+🎗 These features enhance user experience.
+
+## HOW TO CONTRIBUTE:
+
+Fork my repositories so I can fork yours:
+
+https://github.com/JonSno29/JonSno29.git
+
+Use the "scout rule" to help others.
+
+## TESTS:
+
+🎗 Trial and error
+
+🎗 Research
+
+## CONTACT:
+
+Snoverjon@gmail.com
