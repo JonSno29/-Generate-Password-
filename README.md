@@ -24,8 +24,7 @@ WHEN prompted for password criteria
 
 THEN I select which criteria to include in the password
 
-WHEN prompted for the length
- of the password
+WHEN prompted for the length of the password
 
 THEN I choose a length of at least 8 characters and no more than 128 characters
 
@@ -47,6 +46,7 @@ THEN the password is either displayed in an alert or written to the page
 
 ## LIVE LINK:
 
+https://github.com/JonSno29/-Generate-Password-.git
 
 
 ## INSTALLATION, USAGE & MOCK-UP:
